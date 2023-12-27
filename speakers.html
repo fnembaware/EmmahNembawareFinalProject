@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Upcoming Events - Tallinn University HCI Hub</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tallinn University HCI Hub</h1>
+        <p>Connecting the World of Human-Computer Interaction</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upcoming-events.html">Upcoming Events</a></li>
+            <li><a href="featured-speakers.html">Featured Speakers</a></li>
+            <li><a href="meetup-rooms.html">Meetup Rooms</a></li>
+            <li><a href="networking-opportunities.html">Networking Opportunities</a></li>
+            <li><a href="mentoring-program.html">Mentoring Program</a></li>
+            <li><a href="hub-blog.html">Hub Blog</a></li>
+        </ul>
+    </nav>
+
+    <section class="speakers-container">
+        <h2>Featured Speakers</h2>
+
+        <!-- Speaker List Container -->
+        <div class="speaker-list">
+            <!-- Individual Speaker Cards go here -->
+            <div class="speaker-card">
+                <img src="speaker1.jpg" alt="Speaker 1 Image">
+                <h3>Speaker 1</h3>
+                <p>Topic: HCI Trends</p>
+            </div>
+
+            <div class="speaker-card">
+                <img src="speaker2.jpg" alt="Speaker 2 Image">
+                <h3>Speaker 2</h3>
+                <p>Topic: Usability Testing</p>
+            </div>
+
+            <!-- Add more speaker cards as needed -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button id="prevBtn" onclick="changeSlide(-1)">Previous</button>
+            <button id="nextBtn" onclick="changeSlide(1)">Next</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tallinn University HCI Hub</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
