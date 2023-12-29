@@ -1,5 +1,6 @@
 const accessKey = "PwYO_lHIYAHEHFxcaI3HjKJrdgYwOUfrCPmN8x7EtDg"
 
+
 const formEle = document.querySelector("form")
 const inputEle = document.getElementById("search-input")
 const speakerResults = document.querySelector(".speaker-results")
@@ -9,13 +10,16 @@ let inputData = ""
 let page = 1;
 
 async function searchImages(){
+
     inputData = inputEle.value;
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`
+  
+    // const response = await fetch(url);
+            const response = await axios.get(url);
 
-    const response = await fetch(url);
-    const data = await response.json();
+    const data = response.data;
 
-    const results = data.speakerResults
+        const results = data.results;
 
     if (page === 1){
         speakerResults.innerHTML = ""
@@ -25,8 +29,9 @@ async function searchImages(){
         const imageWrapper = document.createElement('div');
         imageWrapper.classList.add("speaker-result");
         const image =document.createElement('img');
-        img.src = result.urls.small
-        img.alt = result.alt_description
+        image.src = result.urls.small
+        image.alt = result.alt_description
+        image.style = "width:100px;height:100px"
         const imageLink = document.createElement('a');
         imageLink.href = result.links.html 
         imageLink.target = "_blank"
