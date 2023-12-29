@@ -261,3 +261,63 @@ h2 {
         width: 100%;
     }
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#about-us {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+#about-us h2 {
+    color: #333;
+}
+
+#about-us p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#highlights {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.highlight {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-content {
+    padding: 20px;
+}
+
+h3 {
+    background-color: #3498db;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+}
+
+p {
+    color: #666;
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

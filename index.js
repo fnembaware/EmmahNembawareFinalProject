@@ -12,8 +12,8 @@ async function searchImages(){
     inputData = inputEle.value;
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`
 
-    const response = await fetch(url)
-    const data = await response.json()
+    const response = await fetch(url);
+    const data = await response.json();
 
     const results = data.speakerResults
 
@@ -21,11 +21,34 @@ async function searchImages(){
         speakerResults.innerHTML = ""
     }
 
-    results.map(results) =>{
-        const imageWrapper = document.createElement('div')
-        imageWrapper.classList.add("searchResult")
-        const image =document.createElement('img')
+    results.map((result) =>{
+        const imageWrapper = document.createElement('div');
+        imageWrapper.classList.add("speaker-result");
+        const image =document.createElement('img');
+        img.src = result.urls.small
+        img.alt = result.alt_description
+        const imageLink = document.createElement('a');
+        imageLink.href = result.links.html 
+        imageLink.target = "_blank"
+        imageLink.textContent = result.alt_deescription
+
+        imageWrapper.appendChild(image);
+        imageWrapper.appendChild(imageLink);
+        speakerResults.appendChild(imageWrapper);
+    });
+
+    page++
+    if(page > 1){
+        showMore.style.display = "block"
     }
 }
 
+formEle.addEventListener("submit", (event) => {
+    event.preventDefault()
+    page = 1;
+    searchImages()
+})
 
+showMore.addEventListener("click", () => {
+    searchImages()
+})
