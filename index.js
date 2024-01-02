@@ -31,7 +31,6 @@ async function searchImages(){
         const image =document.createElement('img');
         image.src = result.urls.small
         image.alt = result.alt_description
-        image.style = "width:100px;height:100px"
         const imageLink = document.createElement('a');
         imageLink.href = result.links.html 
         imageLink.target = "_blank"
@@ -57,3 +56,5 @@ formEle.addEventListener("submit", (event) => {
 showMore.addEventListener("click", () => {
     searchImages()
 })
+
+//testimonial page
