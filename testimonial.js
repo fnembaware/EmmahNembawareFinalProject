@@ -1,30 +1,30 @@
 const reviews = [
     {
-      img: "images/attendee1.jpg",
+      img: "testimonial images/allef-vinicius-C_1jjFJioWg-unsplash.jpg",
       name: "John Doe",
       job: "UX Designer",
       text: "Attending HCI Hub events has been instrumental in shaping my UX design skills. The insightful talks and networking opportunities have opened new doors for my career.",
     },
     {
-      img: "images/attendee2.jpg",
+      img: "testimonial images/lau-keith-dcZsxUAAJXs-unsplash.jpg",
       name: "Jane Smith",
       job: "Software Engineer",
       text: "I've attended multiple events organized by Tallinn University HCI Hub, and each one has been a valuable learning experience. The diverse topics covered and engaging speakers make it a must-attend for anyone in the field.",
     },
     {
-      img: "images/attendee3.jpg",
+      img: "testimonial images/vinicius-wiesehofer-UOavP_Z38lE-unsplash.jpg",
       name: "Alice Johnson",
       job: "Interaction Designer",
       text: "The mentoring program at HCI Hub has provided me with valuable guidance in my journey as an interaction designer. The personalized mentorship has greatly contributed to my professional growth.",
     },
     {
-      img: "images/attendee4.jpg",
+      img: "testimonial images/mohammad-faruque-SpIKPT8zeAs-unsplash.jpg",
       name: "Bob Anderson",
       job: "Front-end Developer",
       text: "HCI Hub's networking opportunities have allowed me to connect with industry professionals and fellow developers. The collaborative environment fosters innovation and knowledge sharing.",
     },
     {
-      img: "images/attendee5.jpg",
+      img: "testimonial images/taylor-grote-UiVe5QvOhao-unsplash.jpg",
       name: "Eva Rodriguez",
       job: "User Researcher",
       text: "As a user researcher, the featured speakers at HCI Hub have provided valuable insights into the latest trends and methodologies. It's a great platform to stay updated and connected with the UX community.",
