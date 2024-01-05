@@ -262,7 +262,7 @@ h2 {
     }
 }
 
-.container {
+.index-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -408,23 +408,6 @@ img {
     border-radius: 100%; 
 }
 
-    * ---------- networking page ----------- */
-
-    .moving-logos-container {
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    .moving-logos {
-        display: inline-block;
-        margin-right: 20px; /* Adjust the spacing between logos */
-        animation: moveLeft 10s linear infinite;
-    }
-
-    @keyframes moveLeft {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-    }
 
    /* Blog */
    #blog-container{
@@ -486,7 +469,6 @@ width:60%;
     display: block;
     margin-bottom: 10px;
     }
-
 
     /* meme page*/
 .meme-generator {

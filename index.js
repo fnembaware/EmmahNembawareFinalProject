@@ -57,7 +57,7 @@ showMore.addEventListener("click", () => {
     searchImages()
 })
 
-//testimonial page
+
 
 
 
