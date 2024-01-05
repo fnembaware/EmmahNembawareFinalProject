@@ -1,3 +1,5 @@
+//speakers page 
+
 const accessKey = "PwYO_lHIYAHEHFxcaI3HjKJrdgYwOUfrCPmN8x7EtDg"
 
 
@@ -64,52 +66,3 @@ showMore.addEventListener("click", () => {
 
 
 
-
-//networking(Meme) page  
-const generateMemeBtn = document.querySelector(
-    ".meme-generator .generate-meme-btn"
-    );
-const memeImage = document.querySelector(".meme-generator img");
-const memeTitle = document.querySelector(".meme-generator .meme-title");
-const memeAuthor = document.querySelector(".meme-generator .meme-author");
-
-const updateDetails = (url, title, author) => {
-    memeImage.setAttribute("src", url);
-    memeTitle.innerHTML = title;
-    memeAuthor.innerHTML = `Meme by: ${author}`;
-};
-
-const generateMeme = (url,title,author) => {
-    fetch("https://meme-api.com/gimme/wholesomememes")
-    .then((response) => response.json())
-    .then(data => {
-        updateDetails(data.url, data.title, data.author);
-    });
-};
-
-generateMemeBtn.addEventListener("click", generateMeme);
-
-
-//shop page 
-const search = () => {
-    const searchbox = document.getElementById("search-item").value.toUpperCase();
-     const storeitems = document.getElementById("product-list")
-     const product = document.querySelectorAll(".product")
-     const pname = storeitems.getElementsByTagName("h2")
-
-
-for(var i=0; i < pname.length; i++) {
-    let match = product[i].getElementsByTagName('h2')[0];
-
-    if (match) {
-        let textvalue = match.textContent || match.innerHTML
-
-        if (textvalue.toUpperCase().indexOf(searchbox) > -1){
-            product[i].style.display = "";
-        } else {
-            product[i].style.display = "none";
-
-        }
-      }
-   }
- }
