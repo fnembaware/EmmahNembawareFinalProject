@@ -28,10 +28,11 @@
     <section class="container">
         <form>
             <i class="fas fa-search"></i>
-            <input type="text" name="" id="search-item" placeholder="Search products">
+            <input type="text" name="" id="search-item" placeholder="Search products" 
+            onkeyup="search()">
         </form>
 
-        <div class="product-list">
+        <div class="product-list" id="product-list">
                <div class="product">
                    <img src="Shop/images.jpeg" alt="">
                    <div class="p-details">
