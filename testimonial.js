@@ -1,4 +1,4 @@
-const reviews = [
+const reviews = [ //array
     {
       img: "testimonial images/allef-vinicius-C_1jjFJioWg-unsplash.jpg",
       name: "John Doe",
@@ -33,7 +33,7 @@ const reviews = [
 
 
 
-const img = document.getElementById("person-img");
+const img = document.getElementById("person-img"); //declare variable
 const reviewAuthor = document.getElementById("reviewAuthor");
 const job = document.getElementById("job");
 const comment = document.getElementById("comment");
@@ -42,35 +42,37 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 
-let index = 0;
+let index = 0; //determine the testimonial in the array to be displayed
 
-function showInformation() {
-    img.src = reviews[index].img;
+//updates the displayed 
+function showInformation() { 
+    img.src = reviews[index].img; 
     reviewAuthor.textContent = reviews[index].name;
     job.textContent = reviews[index].job;
     comment.textContent = reviews[index].text;
 }
-
+//when page is ready show initial testimonial
 window.addEventListener("DOMContentLoaded", function () {
     showInformation();
 });
 
 prevBtn.addEventListener("click", function () {
-    index--;
+    index--; //decreases value of the index by 1
     if (index < 0) {
-        index = reviews.length - 1;
+        index = reviews.length - 1; //looping effect resets to last testimonial
     }
     showInformation();
 });
 
 nextBtn.addEventListener("click", function () {
-    index++;
+    index++; //increases value of the index by 1
     if (index >= reviews.length) {
         index = 0;
     }
     showInformation();
 });
 
+//random index displays testimonial associated with the index
 randomBtn.addEventListener("click", function () {
     const randomIndex = Math.floor(Math.random() * reviews.length);
     index = randomIndex;

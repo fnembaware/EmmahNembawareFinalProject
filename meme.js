@@ -5,12 +5,14 @@ const memeImage = document.querySelector(".meme-generator img");
 const memeTitle = document.querySelector(".meme-generator .meme-title");
 const memeAuthor = document.querySelector(".meme-generator .meme-author");
 
+//function to update meme details with the below template
 const updateDetails = (url, title, author) => {
     memeImage.setAttribute("src", url);
     memeTitle.innerHTML = title;
     memeAuthor.innerHTML = `Meme by: ${author}`;
 };
 
+//function fetched meme from API and pushes through template above
 const generateMeme = (url,title,author) => {
     fetch("https://meme-api.com/gimme/wholesomememes")
     .then((response) => response.json())
@@ -19,4 +21,5 @@ const generateMeme = (url,title,author) => {
     });
 };
 
+//below code initiates the process of fetching meme from API
 generateMemeBtn.addEventListener("click", generateMeme);
